@@ -22,7 +22,7 @@ def update(position:int , task:str=None , category:str=None):
     typer.echo(f"updating {position}")
     show()
 
-@app.command("only if u actually did it ")
+@app.command(short_help="only if u actually did it ")
 def complete(position: int):
     typer.echo(f"completing {position}")
     show()
