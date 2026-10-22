@@ -1,6 +1,6 @@
 import datetime
 
-class task:
+class Task:
     def __init__(self,task,category,
                  date_added=None,date_completed=None
                  ,status=None,position=None):
