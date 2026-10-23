@@ -43,11 +43,11 @@ def delete_task(position):
 
     with con:
         cur.execute("DELETE from tasks WHERE position=:position",{"position":position})
-        for pos in range(position-1, count):
+        for pos in range(position+1, count):
             change_position(pos, pos-1, False)
 
 def change_position(old_position:int, new_position:int, commit=True):
-    cur.execute('UPDATE tasks SET position=:position_new WHERE position=position_old',
+    cur.execute('UPDATE tasks SET position=:position_new WHERE position=:position_old',
                 {"position_old":old_position, "position_new":new_position})
 
     if commit:

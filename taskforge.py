@@ -22,13 +22,13 @@ def delete(position: int):
     delete_task(position-1)
     show()
 
-@app.command(short_help="give ur work an update")
+@app.command(short_help="after position specify task and/or category")
 def update(position:int , task:str=None , category:str=None):
     typer.echo(f"updating {position}")
     update_task(position-1, task, category)
     show()
 
-@app.command(short_help="only if u actually did it ")
+@app.command(short_help="only if u actually did it :D")
 def complete(position: int):
     typer.echo(f"completing {position}")
     complete_task(position-1)
@@ -46,7 +46,7 @@ def show():
     table.add_column("Status",min_width=14, justify="right")
 
     def get_category_colour(category):
-        COLOURS=[('Coding','cyan'), ('Study','blue'), ('Essential works','magenta') ]
+        COLOURS={'Coding':'cyan', 'Study':'blue','Personal':'magenta'}
         if category in COLOURS:
             return COLOURS[category]
         return "white" 
