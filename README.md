@@ -1,3 +1,3 @@
 # TaskForge
 
-![image alt]{/workspaces/TaskForge/logo.png}
+![image alt](logo.png)
