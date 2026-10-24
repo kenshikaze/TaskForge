@@ -39,7 +39,7 @@ python taskforge.py <command> --help
 3.Personal
 
 ## Commands
-It has Five commands:-
+It has Six commands:-
 1.**add :-**
 ```bash
 python taskforge.py add "<task>" "<category>"
@@ -67,6 +67,11 @@ python taskforge.py show --status <1/2>
 ```
 *status is optional<br>
 (*1 = pending tasks ; 2 =complete tasks*)
+
+6.**stats :-**
+```bash
+python taskforge.py stats
+```
 
 ## Contibuter
 Made by Kaze(kenshikaze)
