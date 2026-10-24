@@ -35,8 +35,8 @@ def complete(position: int):
     show()
 
 @app.command()
-def show():
-    tasks=task_list()
+def show(status:int=None):
+    tasks=task_list(status)
     console.print("[bold green]Ur Task List[/bold green]","🗒️")
 
     table=Table(show_header=True, header_style="bold blue")
@@ -57,6 +57,6 @@ def show():
         table.add_row(str(idx),task.task,f'[{c}]{task.category}[/{c}]',is_done_str)
     console.print(table)
 
-
 if __name__=="__main__":
     app()
+ 

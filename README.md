@@ -34,7 +34,7 @@ python taskforge.py <command> --help
 ```
 
 ## Commands
-It has Four commands:-
+It has Five commands:-
 1.**add :-**
 ```bash
 python taskforge.py add "<task>" "<category>"
@@ -49,12 +49,19 @@ python taskforge.py delete <position>
 ```bash
 python taskforge.py update <position> --task "<task>" --category "<category>"
 ```
-*task and category are optional*
+*task and category are optional<br>
+(*chose what you want to update*)
 
 4.**complete :-**
 ```bash
 python taskforge.py complete <position>
 ```
+5.**show :-**
+```bash
+python taskforge.py show --status <1/2>
+```
+*status is optional<br>
+(*1 = pending tasks ; 2 =complete tasks*)
 
 ## Contibuter
 Made by Kaze(kenshikaze)

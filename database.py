@@ -28,8 +28,11 @@ def insert_task(task:Task):
         cur.execute('INSERT INTO tasks VALUES (:task, :category, :date_added, :date_completed, :status, :position)',
                   {'task':task.task, 'category':task.category, 'date_added':task.date_added, 'date_completed':task.date_completed, 'status':task.status, 'position':task.position})
 
-def task_list() -> List[Task]:
-    cur.execute('select * from tasks')
+def task_list(status:int=None) -> List[Task]:
+    if status is not None:
+        cur.execute('select * from tasks where status=:status', {'status':status})
+    else:
+        cur.execute('select * from tasks')
     results=cur.fetchall()
     tasks=[]
     for result in results:
