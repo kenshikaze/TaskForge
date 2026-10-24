@@ -33,6 +33,11 @@ python taskforge.py --help
 python taskforge.py <command> --help
 ```
 
+-It has 3 in-built categories(*for tasks*):-
+1.Coding
+2.Study
+3.Personal
+
 ## Commands
 It has Five commands:-
 1.**add :-**
