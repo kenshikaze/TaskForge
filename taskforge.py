@@ -2,8 +2,9 @@ import typer
 from rich.console import Console
 from rich.table import Table
 from model import Task
-from database import task_list, insert_task, delete_task, update_task, complete_task
-
+from database import task_list, insert_task, delete_task, update_task, complete_task, statistic
+from rich.panel import Panel
+from rich.columns import Columns
 
 console=Console()
 
@@ -33,6 +34,18 @@ def complete(position: int):
     typer.echo(f"completing {position}")
     complete_task(position-1)
     show()
+
+@app.command()
+def stats():
+    typer.echo("Fetching data")
+    statistic()
+    total, pending, completed =statistic()
+    console.print(Columns([
+        Panel(f"{total}", title="TOTAL TASKS", border_style="blue"),
+        Panel(f"{pending}", title="PENDING TASKS", border_style="red"),
+        Panel(f"{completed}", title="COMPLETED TASKS", border_style="green")
+    ]))    
+
 
 @app.command()
 def show(status:int=None):

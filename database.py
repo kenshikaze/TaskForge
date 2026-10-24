@@ -72,3 +72,15 @@ def complete_task(position:int):
     with con:
         cur.execute("UPDATE tasks SET status=2, date_completed= :date_completed WHERE position= :position",
                     {"position":position, "date_completed":datetime.datetime.now().isoformat()})
+
+def statistic():
+    cur.execute('SELECT COUNT(*) FROM tasks')
+    total_count=cur.fetchone()[0]
+
+    cur .execute('select count(*) from tasks where status=1')
+    pending_count=cur.fetchone()[0]
+
+    cur.execute('select count(*) from tasks where status=2')
+    complete_count=cur.fetchone()[0]
+
+    return total_count, pending_count, complete_count
