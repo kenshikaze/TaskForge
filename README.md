@@ -31,18 +31,42 @@ pip install -r requirements.txt
 ## Using prebuilt Linux executable
 
 1.Open the project's Github releases page:-
-(*under development)
+```bash
+https://github.com/kenshikaze/TaskForge/releases/tag/v0.1.0
+```
 
+2.Download the TaskForge executable from the release assets.
+3.Open a terminal in the directory containing the download file.
+4.Give the file permission to execute:
+```bash
+chmod +x TaskForge
+```
+5. Check how it works:
+```bash
+./TaskForge --help
+```
+
+-You can run commands using **./TaskForge** .
 
 ## Usage
 Run TaskForge in the project directory:-
+**Python source:-**
 ```bash
 python taskforge.py --help
 ```
+**Prebuilt Executive:-**
+```bash
+./TaskForge --help
+```
 
-*view help for specif command*
+-To view help for specific command:-
+**Python source:-**
 ```bash
 python taskforge.py <command> --help
+```
+**Prebuilt executable:-**
+```bash
+./TaskForge --help
 ```
 
 -It has 3 in-built categories(*for tasks*):-
@@ -52,6 +76,8 @@ python taskforge.py <command> --help
 
 ## Commands
 It has Six commands:-
+(These all are the syntax for commands to run when the you go with way 1,<br>
+-Replace **python taskforge.py** with **./TaskForge** to use the commands in Linux executable.)
 1.**add :-**
 ```bash
 python taskforge.py add "<task>" "<category>"
@@ -86,6 +112,10 @@ python taskforge.py stats
 ```
 
 -Tasks are stored locally in a file named **tasks.db**,which will be created automatically when needed.
+
+## Limitations
+-Only tested in Linux(Codespaces)
+-The executable is a terminal application, not a graphical desktop application.
 
 ## Contributer
 Made by Kaze(kenshikaze)
