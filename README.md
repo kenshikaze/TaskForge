@@ -2,10 +2,16 @@
 
 ![image alt](logo.png)
 
-It is a simple todo list, that runs in a terminal across Linux(*tested*),Windows,etc.<br>
+-It is a simple todo list, that runs in a Linux terminal. <br>
+-*Other Operating systems are still untested.*
+
+-It can be run from the **source**, and a **prebuilt Linux executable** is available for users who don't want to set up Python manually.
 
 ## Installation
-**Prerequisities:-** Python 3.x and git
+-As stated in description, it can run in both ways(*from source & from Linux executable*)
+
+## Using source(Way 1)
+**Prerequisites:-** Python 3.12(*tested*) and git
 
 1.Clone the repo:-
 ```bash
@@ -21,6 +27,12 @@ cd Taskforge
 ```bash 
 pip install -r requirements.txt
 ```
+
+## Using prebuilt Linux executable
+
+1.Open the project's Github releases page:-
+(*under development)
+
 
 ## Usage
 Run TaskForge in the project directory:-
@@ -73,5 +85,7 @@ python taskforge.py show --status <1/2>
 python taskforge.py stats
 ```
 
-## Contibuter
+-Tasks are stored locally in a file named **tasks.db**,which will be created automatically when needed.
+
+## Contributer
 Made by Kaze(kenshikaze)
